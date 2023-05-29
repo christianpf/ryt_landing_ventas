@@ -6,7 +6,7 @@ import { AiOutlineArrowDown } from "react-icons/ai";
 import gif from "../../assets/giphy.gif";
 import playButton from "../../assets/play_button.png";
 import FormModal from "../FormModal";
-import { useNavigate, redirect } from "react-router";
+import { useNavigate } from "react-router";
 
 const Hero = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -17,7 +17,7 @@ const Hero = () => {
   useEffect(() => {
     if(newLead !== null) {
       setTimeout(() => {
-          navigate("/1_ver_video", {replace: true});
+        navigate("1_ver_video");
       }, 3000)
     }
   }, [newLead]);
@@ -49,13 +49,14 @@ const Hero = () => {
             aria_label="iniciar video"
             className="play_button"
             onClick={() => setIsModalOpen(true)}
+            disabled={isAlertOpen}
           >
             <img src={playButton} alt="Iniciar video" />
           </button>
         </div>
 
         <h2>¿A QUÉ ESPERAS? DA UN SALTO HACIA DELANTE</h2>
-        <button className="btn-cta" onClick={() => setIsModalOpen(true)}>
+        <button className="btn-cta" onClick={() => setIsModalOpen(true)} disabled={isAlertOpen}>
           <span>Haga Click y empezemos a generar ventas</span>{" "}
         </button>
         <h2 className="text-accent-primary">En serio 100% automático</h2>

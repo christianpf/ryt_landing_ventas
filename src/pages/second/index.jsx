@@ -14,7 +14,8 @@ const Second = () => {
   const countdownRef = useRef(null);
 
   useEffect(() => {
-    countdownRef.current.start();
+    if (isVideoActive)
+      countdownRef.current.start();
   }, [isVideoActive]);
 
   const renderCountdown = (props) => {
@@ -51,7 +52,7 @@ const Second = () => {
           <div className="video__container">
             <VideoFull width={900} height={isMobile ? 300 : 400} activate={setIsVideoActive}/>
           </div>
-          <Countdown ref={countdownRef} controlled={false} date={Date.now() + VIDEO_WATCH_TIME*1000} autoStart={false} renderer={renderCountdown} />
+          <Countdown ref={countdownRef}  date={Date.now() + VIDEO_WATCH_TIME*1000} autoStart={false} renderer={renderCountdown} />
 
           <h2 className="text-accent-primary">En serio 100% automático</h2>
         </Stack>
