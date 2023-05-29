@@ -19,9 +19,9 @@ function App() {
   return (
     <>
       <Routes>
-        <Route path="/" element={<Layout />}>
+        <Route path="/ryt_landing_ventas" element={<Layout />}>
           <Route index element={<Home />}/>
-          <Route path="1_ver_video" element={<Second />}/>
+          <Route path="/1_ver_video" element={<Second />}/>
           <Route path="ultimo_paso" element={<Last />}/>
           <Route path="gracias" element={<Thanks />} />
           <Route path="*" element={<NoPage />} />
