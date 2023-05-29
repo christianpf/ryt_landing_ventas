@@ -55,7 +55,7 @@ p, h1, h2, h3, h4, h5, h6 {
 
 :root {
   --clr-primary: white;
-  --clr-seconday: black;
+  --clr-secondary: black;
   --clr-accent-primary: rgba(29, 201, 188, 1);
   --clr-accent-secondary: rgb(36, 175, 154);
   --clr-alert: rgba(212, 69, 18, 1);

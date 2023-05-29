@@ -314,3 +314,35 @@ input {
 }
 
 
+/* Footer */
+
+.footer {
+  width: 100%;
+  background-color: var(--clr-secondary);
+  color: var(--clr-primary);
+  font-size: clamp(0.75rem, 1.25rem, 2rem);
+}
+
+.footer__container {
+  padding-block: 2rem;
+  width: 75%;
+  margin: auto;
+  background-color: black;
+  text-align: center;
+}
+
+@media (width < 600px) {
+  .footer__container {
+    width: 100%;
+  }
+}
+
+.footer__links > a {
+  text-decoration: none;
+  color: var(--clr-accent-secondary);
+}
+
+.footer__links > a:hover {
+  text-decoration: underline;
+  color: var(--clr-accent-primary);
+}
